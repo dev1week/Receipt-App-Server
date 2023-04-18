@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os 
 from django.core.exceptions import ImproperlyConfigured
+import my_settings
 #w장고 시크릿 키 환경 변수화 
 def get_env_variable(var_name):
   """환경 변수를 가져오거나 예외를 반환한다."""
@@ -23,7 +24,7 @@ def get_env_variable(var_name):
     raise ImproperlyConfigured(error_msg)
 
 
-SECRET_KEY = get_env_variable("DJANGO_SECRET_KEY")
+SECRET_KEY = my_settings.DJANGO_SECRETKEY
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -96,14 +97,7 @@ WSGI_APPLICATION = 'RecieptProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
+DATABASES = my_settings.PROD_TEST_DATABASES
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
