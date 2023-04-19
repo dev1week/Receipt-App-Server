@@ -97,7 +97,7 @@ WSGI_APPLICATION = 'RecieptProject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = my_settings.PROD_TEST_DATABASES
+DATABASES = my_settings.DEV_DATABASES
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
