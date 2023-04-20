@@ -24,3 +24,7 @@ mainApp/__pycache__/views.cpython-36.pyc
 mainApp/migrations/__pycache__/__init__.cpython-36.pyc
 
 mainApp/migrations/__pycache__/0001_initial.cpython-36.pyc
+
+my_settings.py
+
+__pycache__/
